@@ -18,6 +18,16 @@ class Plant extends Sprite
 	var branches:Array<Branch> = new Array();
 	var numBranches:Int = 0;
 
+	//variables for watermodifier
+	var waterModifier:Int;
+	var balanceModifier:Int;
+	
+	//variables for plant stability
+	var currentStability:Int;
+	var maxStability:Int;
+	
+	//variables for aphids
+	var aphidAmount:Int;
 	public function new() 
 	{
 		super();
@@ -179,5 +189,10 @@ class Plant extends Sprite
 		
 		addChild(stems[numStems]);
 		numStems++;
+	}
+	
+	public function waterState()
+	{
+		waterModifier = waterModifier + 1;
 	}
 }
