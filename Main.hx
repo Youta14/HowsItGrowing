@@ -55,4 +55,11 @@ class Main extends Sprite
 			}
 		}
 	}
+	
+	function turnUpdate()
+	{
+		RandomEvents.pickEvent();
+		RandomEvents.aphids();
+		//playeraction
+	}
 }
